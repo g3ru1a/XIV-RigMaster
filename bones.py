@@ -56,6 +56,45 @@ back_gear_left = "j_buki_sebo_l"
 back_gear_right = "j_buki_sebo_r"
 root = "n_root"
 
+#Face Bones
+jaw = "j_ago"
+mouth_bottom = "j_f_dlip_a"
+mouth_upper = "j_f_ulip_a"
+lip_bottom = "j_f_dlip_b"
+lip_upper = "j_f_ulip_b"
+corner_lip_left = "j_f_lip_l"
+corner_lip_right = "j_f_lip_r"
+cheek_left = "j_f_hoho_l"
+cheek_right = "j_f_hoho_r"
+nose = "j_f_hana"
+eye_corner_inner = "j_f_memoto"
+eyebrow_left_main = "j_f_mayu_l"
+eyebrow_left_inner = "j_f_miken_l"
+eyebrow_right_main = "j_f_mayu_r"
+eyebrow_right_inner = "j_f_miken_r"
+eyelid_left_bottom = "j_f_dmab_l"
+eyelid_left_top = "j_f_umab_l"
+eyelid_right_bottom = "j_f_dmab_r"
+eyelid_right_top = "j_f_umab_r"
+eye_left = "j_f_eye_l"
+eye_right = "j_f_eye_r"
+
+# Hair
+hair_long = ["j_kami_a", "j_kami_b"]
+hair_front = "j_ex_h0158_ke_f"
+hair_left = "j_ex_h0158_ke_l"
+hair_right = "j_ex_h0158_ke_r"
+hair_back = "j_ex_h0158_ke_b"
+hair_extensions_left = "j_kami_f_l"
+hair_extensions_right = "j_kami_f_r"
+
+# Ear
+ear_left = "j_mimi_l"
+ear_right = "j_mimi_r"
+earring_left = ["n_ear_a_l", "n_ear_b_l"]
+earring_right = ["n_ear_a_r", "n_ear_b_r"]
+
+
 #Created Bones
 IK_foot_l = "IK_foot_l"
 IK_foot_r = "IK_foot_r"

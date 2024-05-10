@@ -8,11 +8,12 @@ class PoseBone:
     def __init__(self, armature: bpy.types.Armature, bone_name: str) -> None:
         self.armature = armature;
         self.bone = armature.pose.bones.get(bone_name)
-        if(self.bone is None):
-            raise ValueError(f"Value Error: {bone_name} not found in the armature.")
+        # if(self.bone is None):
+        #     raise ValueError(f"Value Error: {bone_name} not found in the armature.")
     
     def custom_shape(self, custom_object: bpy.types.Object, color: str="DEFAULT", scale=(1,1,1),
                     translation=(0,0,0), rotation=(0,0,0)) -> None:
+        if self.bone is None: return
         bpy.ops.object.mode_set(mode="POSE")
         self.bone.custom_shape = custom_object
         self.bone.custom_shape_scale_xyz = scale
@@ -22,22 +23,27 @@ class PoseBone:
         bpy.ops.object.mode_set(mode="OBJECT")
 
     def visibility(self, visible: bool):
+        if self.bone is None: return
         bpy.ops.object.mode_set(mode="POSE")
         self.bone.bone.hide = not visible
         bpy.ops.object.mode_set(mode="OBJECT")
 
     def toggleVisibility(self) -> None:
+        if self.bone is None: return
         bpy.ops.object.mode_set(mode="POSE")
         self.bone.bone.hide = not self.bone.bone.hide;
         bpy.ops.object.mode_set(mode="OBJECT")
 
     def getTailPos(self) -> Tuple[float,float,float] | mathutils.Vector:
+        if self.bone is None: return (0,0,0)
         return self.bone.tail
     
     def getHeadPos(self) -> Tuple[float,float,float] | mathutils.Vector:
+        if self.bone is None: return (0,0,0)
         return self.bone.head
     
     def addIKConstraint(self, bone_name: str, chain_count: int = 1, pole_bone_name: str = None, pole_angle: float = 0) -> None:
+        if self.bone is None: return
         # Retrieve the target object that will act as the IK controller
         target = bpy.data.objects.get(self.armature.name)
         if not target:
@@ -54,6 +60,7 @@ class PoseBone:
         bpy.ops.object.mode_set(mode='OBJECT')
     
     def addCopyRotationConstraint(self, bone_name: str) -> None:
+        if self.bone is None: return
         target = bpy.data.objects.get(self.armature.name)
         if not target:
             raise ValueError(f"Target object '{self.armature.name}' not found.")
@@ -66,6 +73,7 @@ class PoseBone:
         bpy.ops.object.mode_set(mode='OBJECT')
 
     def disableInheritRotation(self) -> None:
+        if self.bone is None: return
         bpy.ops.object.mode_set(mode='POSE')
         self.bone.bone.use_inherit_rotation = False
         bpy.ops.object.mode_set(mode='OBJECT')

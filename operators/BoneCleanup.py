@@ -145,6 +145,77 @@ class BoneRemovalOperator(bpy.types.Operator):
         Boner.PoseBone(armature, bones.IK_wrist_r).custom_shape(shapes.get("Handshape"), color="THEME06", scale=(.2,.2,.2), translation=(0,.08,0), rotation=(0, math.radians(-90), 0))
         Boner.PoseBone(armature, bones.POLE_wrist_r).custom_shape(shapes.get("Sphere"), color="THEME06", scale=(.2,.2,.2))
         
+
+        # Face Bones
+        # Jaw
+        Boner.PoseBone(armature, bones.jaw).custom_shape(shapes.get("Jaw"), color="THEME03", translation=(-.03,.04,0), rotation=(0, math.radians(90), 0))
+        # Lips
+        Boner.PoseBone(armature, bones.corner_lip_right).custom_shape(shapes.get("Circle"), color="THEME03", scale=(.5,.5,.5),
+                                                                      translation=(.07,0,0), rotation=(math.radians(-60),math.radians(90), 0))
+        Boner.PoseBone(armature, bones.corner_lip_left).custom_shape(shapes.get("Circle"), color="THEME03", scale=(.5,.5,.5),
+                                                                      translation=(.07,0,0), rotation=(math.radians(-60),math.radians(90), 0))
+
+        Boner.PoseBone(armature, bones.mouth_upper).custom_shape(shapes.get("Top_Lip_In"), color="THEME03",
+                scale=(.8,.8,.8), translation=(0,.055, 0), rotation=(math.radians(-60), math.radians(180), 0))
+        Boner.PoseBone(armature, bones.mouth_bottom).custom_shape(shapes.get("Bottom_Lip_In"), color="THEME03",
+                scale=(.8,.8,.8), translation=(0,.052, .002), rotation=(math.radians(-45), math.radians(180), 0))
+        Boner.PoseBone(armature, bones.lip_upper).custom_shape(shapes.get("Top_Lip_Out"), color="THEME03",
+                scale=(1,1,1), translation=(0,.009, .002), rotation=(math.radians(-45), 0, 0))
+        Boner.PoseBone(armature, bones.lip_bottom).custom_shape(shapes.get("Bottom_Lip_Out"), color="THEME03",
+                scale=(1,1,1), translation=(0,.009, -.002), rotation=(math.radians(-45), 0, 0))
+
+        # Cheeks
+        Boner.PoseBone(armature, bones.cheek_left).custom_shape(shapes.get("Circle"), color="THEME03", translation=(.1,0,0),
+                                                                rotation=(math.radians(90), math.radians(90), 0))
+        Boner.PoseBone(armature, bones.cheek_right).custom_shape(shapes.get("Circle"), color="THEME03", translation=(.1,0,0),
+                                                                rotation=(math.radians(90), math.radians(90), 0))
+
+        # Nose
+        Boner.PoseBone(armature, bones.nose).custom_shape(shapes.get("Circle"), color="THEME03", scale=(.5,.5,.5),
+                                                          translation=(.1,0,0), rotation=(math.radians(90), math.radians(90), 0))
+
+        # Eyes
+        Boner.PoseBone(armature, bones.eyelid_left_bottom).custom_shape(shapes.get("Eyelid_Bottom"), color="THEME03",
+                scale=(15,15,15), translation=(.02,0,0), rotation=(math.radians(180), math.radians(90),0))
+        Boner.PoseBone(armature, bones.eyelid_right_bottom).custom_shape(shapes.get("Eyelid_Bottom"), color="THEME03",
+                scale=(15,15,15), translation=(.02,0,0), rotation=(math.radians(180), math.radians(90),0))
+        
+        Boner.PoseBone(armature, bones.eyelid_left_top).custom_shape(shapes.get("Eyelid_top"), color="THEME03",
+                scale=(15,15,15), translation=(.02,0,0), rotation=(math.radians(180), math.radians(-90),0))
+        Boner.PoseBone(armature, bones.eyelid_right_top).custom_shape(shapes.get("Eyelid_top"), color="THEME03",
+                scale=(15,15,15), translation=(.02,0,0), rotation=(math.radians(180), math.radians(-90),0))
+
+        # Eyebrows
+        Boner.PoseBone(armature, bones.eyebrow_left_main).custom_shape(shapes.get("Circle"), color="THEME03",
+                scale=(.7,.7,.7), translation=(.11,0,-.01), rotation=(math.radians(-60), math.radians(90), 0))
+        Boner.PoseBone(armature, bones.eyebrow_left_inner).custom_shape(shapes.get("Circle"), color="THEME03",
+                scale=(.5,.5,.5), translation=(.08,0,0), rotation=(math.radians(-60), math.radians(90), 0))
+        Boner.PoseBone(armature, bones.eyebrow_right_main).custom_shape(shapes.get("Circle"), color="THEME03",
+                scale=(.7,.7,.7), translation=(.11,0,.01), rotation=(math.radians(-60), math.radians(90), 0))
+        Boner.PoseBone(armature, bones.eyebrow_right_inner).custom_shape(shapes.get("Circle"), color="THEME03",
+                scale=(.5,.5,.5), translation=(.08,0,0), rotation=(math.radians(-60), math.radians(90), 0))
+
+        # Hair Bones
+        for bone_name in bones.hair_long:
+            Boner.PoseBone(armature, bone_name).custom_shape(shapes.get("Arrow"), color="THEME07", rotation=(math.radians(-90), 0, 0))
+
+        Boner.PoseBone(armature, bones.hair_back).custom_shape(shapes.get("Sphere"), color="THEME07")
+        Boner.PoseBone(armature, bones.hair_left).custom_shape(shapes.get("Sphere"), color="THEME07")
+        Boner.PoseBone(armature, bones.hair_right).custom_shape(shapes.get("Sphere"), color="THEME07")
+        Boner.PoseBone(armature, bones.hair_front).custom_shape(shapes.get("Sphere"), color="THEME07")
+        Boner.PoseBone(armature, bones.hair_extensions_left).custom_shape(shapes.get("Sphere"), color="THEME07")
+        Boner.PoseBone(armature, bones.hair_extensions_right).custom_shape(shapes.get("Sphere"), color="THEME07")
+
+        # Ear & Earring
+        Boner.PoseBone(armature, bones.ear_left).custom_shape(shapes.get("Sphere"), color="THEME01", scale=(.1,.1,.1))
+        Boner.PoseBone(armature, bones.ear_right).custom_shape(shapes.get("Sphere"), color="THEME01", scale=(.1,.1,.1))
+
+        for bone_name in bones.earring_left:
+            Boner.PoseBone(armature, bone_name).custom_shape(shapes.get("Arrow"), color="THEME07", rotation=(math.radians(-90), 0, 0))
+        for bone_name in bones.earring_right:
+            Boner.PoseBone(armature, bone_name).custom_shape(shapes.get("Arrow"), color="THEME07", rotation=(math.radians(-90), 0, 0))
+
+
         # Disable Inherit Rotation on feet
         Boner.PoseBone(armature, bones.foot_left).disableInheritRotation()
         Boner.PoseBone(armature, bones.foot_right).disableInheritRotation()
