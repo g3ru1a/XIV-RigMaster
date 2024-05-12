@@ -13,5 +13,5 @@ Simple addon that cleans up the skeleton of a meddle exported FF14 character
     - Need to test with different hairstyles
  - [x] Button to A-Pose Character
  - [x] Add IK to Legs and Arms
- - [ ] Add Buttons to toggle the visibility of bone groups
+ - [x] Add Buttons to toggle the visibility of bone groups
  - [ ] Maybe more stuff...

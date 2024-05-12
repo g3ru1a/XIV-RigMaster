@@ -36,25 +36,17 @@ class XIVBCMainPanel(bpy.types.Panel):
         row = layout.row()
         row.label(text = "Step 3. Get to work!")
         row = layout.row()
-#        row.operator("xivbc.show_clothes")
-        row.operator("xivbc.toggle_hands")
-        
-    
-class ToggleHandBones(bpy.types.Operator):
-    bl_label = "Toggle Hands"
-    bl_idname = "xivbc.toggle_hands"
-    
-    def execute(self, context):
-        # Check if an Armature is selected
-        # Get the armature object
-        armature = bpy.context.active_object
-        if not armature or armature.type != 'ARMATURE':
-            print("The active object is not an armature.")
-            return
-        
-        # toggle_bone_visibility_array(armature, hand_bones_left)
-        # toggle_bone_visibility_array(armature, hand_bones_right)
-        
-        return {'FINISHED'}
+        row.label(text="Toggle Bone Visibility")
 
+        row = layout.row()
+        row.operator("xivbc.toggle_clothes")
+        row.operator("xivbc.toggle_gear")
+
+        row = layout.row()
+        row.operator("xivbc.toggle_face")
+        row.operator("xivbc.toggle_hair")
+
+        row = layout.row()
+        row.operator("xivbc.toggle_twist")
+        row.operator("xivbc.toggle_tail")
     
