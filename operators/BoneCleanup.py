@@ -245,7 +245,14 @@ class BoneRemovalOperator(bpy.types.Operator):
 
     def importShapeCollection(self) -> dict:
         imported_shapes: dict = {}
-        file_path = os.path.join('assets', 'BoneCleaner-CustomShapes.blend') + r'\Collection'
+
+        script_file = os.path.realpath(__file__)
+        script_dir = os.path.dirname(script_file)
+        addon_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
+        
+        assets_dir = "assets"
+        blendfile = "BoneCleaner-CustomShapes.blend"
+        category = "Collection"
         collection_name = "CustomShapes"
 
         # Get Collection
@@ -253,7 +260,11 @@ class BoneRemovalOperator(bpy.types.Operator):
 
         # If the collection doesn't exist, import Collection from Assets File
         if not imported_collection:
-            bpy.ops.wm.append(directory=file_path, filename=collection_name, link=False)
+            bpy.ops.wm.append(
+                filepath=os.path.join(addon_dir, assets_dir, blendfile, category, collection_name),
+                filename=collection_name,
+                directory=os.path.join(addon_dir, assets_dir, blendfile, category),
+                link=False)
             imported_collection = bpy.data.collections.get(collection_name)
 
         # Load each shape
