@@ -26,7 +26,7 @@ def register():
     bpy.utils.register_class(TestOperator.TestOperator)
     
     # Dawntrail Functionality
-    # bpy.utils.register_class(steps_panel.VIEW3D_PT_StepsPanel)
+    bpy.utils.register_class(steps_panel.VIEW3D_PT_StepsPanel)
 
     # Legacy Functionality
     bpy.utils.register_class(legacy_panel.VIEW3D_PT_LegacyPanel)
@@ -45,7 +45,7 @@ def unregister():
     bpy.utils.unregister_class(TestOperator.TestOperator)
 
     # Dawntrail Functionality
-    # bpy.utils.unregister_class(steps_panel.VIEW3D_PT_StepsPanel)
+    bpy.utils.unregister_class(steps_panel.VIEW3D_PT_StepsPanel)
 
     # Legacy Functionality
     bpy.utils.unregister_class(legacy_panel.VIEW3D_PT_LegacyPanel)

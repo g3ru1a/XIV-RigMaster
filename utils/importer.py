@@ -2,7 +2,7 @@ import os
 import bpy
 
 
-def importShapeCollection(self) -> dict:
+def importShapeCollection(self, filename = "BoneCleaner-CustomShapes.blend") -> dict:
         imported_shapes: dict = {}
 
         script_file = os.path.realpath(__file__)
@@ -10,7 +10,7 @@ def importShapeCollection(self) -> dict:
         addon_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
         
         assets_dir = "assets"
-        blendfile = "BoneCleaner-CustomShapes.blend"
+        blendfile = filename
         category = "Collection"
         collection_name = "CustomShapes"
 

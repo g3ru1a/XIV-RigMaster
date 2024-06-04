@@ -12,17 +12,14 @@ class Config:
         self.category = category
 
 config = Config(
-    name="XIV Bone Cleaner",
-    id_name="xivbc",
+    name="XIV RigMaster",
+    id_name="xivrm",
     author="G3ru1a",
     version=(0, 3),
     blender=(4, 0, 0),
-    location="View3D > UI > XIV Bone Cleaner",
-    description="Cleans up the bones from a Meddle Exported .gltf Model",
+    location="View3D > UI > XIV RigMaster",
+    description="XIV RigMaster enhances Final Fantasy XIV character models by streamlining armatures with custom shapes and adding functionality such as IK and Bone Constraints, ensuring a cleaner and more professional rigging process. Perfect for animators and modellers looking to elevate their creations.",
     warning="",
     doc_url="",
-    category="XIV Bone Cleaner 0.3"
+    category="XIV RigMaster 0.3"
 )
-
-# Example usage
-print(config.name)  # Output: XIV Bone Cleaner
