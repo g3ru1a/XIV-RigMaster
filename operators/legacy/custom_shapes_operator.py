@@ -5,7 +5,7 @@ from ...utils import bones;
 
 class ARMATURE_OT_CustomShapes(bpy.types.Operator):
     bl_label = "Apply Custom Shapes"
-    bl_idname = ".".join(config.id_name, "custom_shapes")
+    bl_idname = ".".join((config.id_name, "custom_shapes"))
     
     def execute(self, context):
         # Check if an Armature is selected
