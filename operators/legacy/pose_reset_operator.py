@@ -1,7 +1,7 @@
 import bpy
 from ...utils import LegacyBoner
 from ...utils.config import config
-from .. import bones;
+from ...utils import bones;
 
 class ARMATURE_OT_PoseReset(bpy.types.Operator):
     bl_label = "Reset Pose"

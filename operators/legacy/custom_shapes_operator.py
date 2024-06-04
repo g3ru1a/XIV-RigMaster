@@ -1,7 +1,8 @@
-import bpy, mathutils, math, os
-from ...utils import LegacyBoner
+import bpy, mathutils, math
+from ...utils import LegacyBoner, bones
 from ...utils.config import config
-from ...utils import bones;
+from ...utils.importer import importShapeCollection
+
 
 class ARMATURE_OT_CustomShapes(bpy.types.Operator):
     bl_label = "Apply Custom Shapes"
@@ -15,7 +16,7 @@ class ARMATURE_OT_CustomShapes(bpy.types.Operator):
             print("The active object is not an armature.")
             return
         # Check if the collection already exists
-        shapes = self.importShapeCollection()
+        shapes = importShapeCollection()
         
         #Setup Bones
         # Root Bones

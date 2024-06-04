@@ -5,6 +5,7 @@ from .panels import legacy_panel, steps_panel
 from .operators import TestOperator
 from .operators.legacy import toggle_visibility_operators as tvo
 from .operators.legacy import custom_shapes_operator as cso
+from .operators.legacy import pose_reset_operator as pro
 
 
 bl_info = {
@@ -25,12 +26,13 @@ def register():
     bpy.utils.register_class(TestOperator.TestOperator)
     
     # Dawntrail Functionality
+    # bpy.utils.register_class(steps_panel.VIEW3D_PT_StepsPanel)
 
     # Legacy Functionality
     bpy.utils.register_class(legacy_panel.VIEW3D_PT_LegacyPanel)
-    bpy.utils.register_class(steps_panel.VIEW3D_PT_StepsPanel)
 
     bpy.utils.register_class(cso.ARMATURE_OT_CustomShapes)
+    bpy.utils.register_class(pro.ARMATURE_OT_PoseReset)
 
     bpy.utils.register_class(tvo.ARMATURE_OT_ToggleClothes)
     bpy.utils.register_class(tvo.ARMATURE_OT_ToggleFace)
@@ -43,12 +45,13 @@ def unregister():
     bpy.utils.unregister_class(TestOperator.TestOperator)
 
     # Dawntrail Functionality
+    # bpy.utils.unregister_class(steps_panel.VIEW3D_PT_StepsPanel)
 
     # Legacy Functionality
     bpy.utils.unregister_class(legacy_panel.VIEW3D_PT_LegacyPanel)
-    bpy.utils.unregister_class(steps_panel.VIEW3D_PT_StepsPanel)
-    
-    bpy.utils.register_class(tvo.ARMATURE_OT_ToggleClothes)
+
+    bpy.utils.unregister_class(cso.ARMATURE_OT_CustomShapes)
+    bpy.utils.unregister_class(pro.ARMATURE_OT_PoseReset)
 
     bpy.utils.unregister_class(tvo.ARMATURE_OT_ToggleClothes)
     bpy.utils.unregister_class(tvo.ARMATURE_OT_ToggleFace)
