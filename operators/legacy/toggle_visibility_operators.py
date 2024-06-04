@@ -1,10 +1,11 @@
-import bpy, mathutils, math, os
-from ..utils import Boner
-from .. import bones;
+import bpy
+from ...utils import LegacyBoner
+from ...utils import bones;
+from ...utils.config import config
 
-class ToggleClothes_OP(bpy.types.Operator):
+class ARMATURE_OT_ToggleClothes(bpy.types.Operator):
     bl_label = "Clothes"
-    bl_idname = "xivbc.toggle_clothes"
+    bl_idname = ".".join(config.id_name, "toggle_clothes")
     
     def execute(self, context):
         
@@ -17,29 +18,29 @@ class ToggleClothes_OP(bpy.types.Operator):
         
         # Cloth Bones
         for bone_name in bones.cloth_back_left:
-            Boner.PoseBone(armature, bone_name).toggleVisibility()
+            LegacyBoner.PoseBone(armature, bone_name).toggleVisibility()
 
         for bone_name in bones.cloth_front_left:
-            Boner.PoseBone(armature, bone_name).toggleVisibility()
+            LegacyBoner.PoseBone(armature, bone_name).toggleVisibility()
 
         for bone_name in bones.cloth_side_left:
-            Boner.PoseBone(armature, bone_name).toggleVisibility()
+            LegacyBoner.PoseBone(armature, bone_name).toggleVisibility()
         
         for bone_name in bones.cloth_back_right:
-            Boner.PoseBone(armature, bone_name).toggleVisibility()
+            LegacyBoner.PoseBone(armature, bone_name).toggleVisibility()
 
         for bone_name in bones.cloth_front_right:
-            Boner.PoseBone(armature, bone_name).toggleVisibility()
+            LegacyBoner.PoseBone(armature, bone_name).toggleVisibility()
 
         for bone_name in bones.cloth_side_right:
-            Boner.PoseBone(armature, bone_name).toggleVisibility()
+            LegacyBoner.PoseBone(armature, bone_name).toggleVisibility()
 
 
         return {'FINISHED'}
     
-class ToggleGear_OP(bpy.types.Operator):
+class ARMATURE_OT_ToggleGear(bpy.types.Operator):
     bl_label = "Gear"
-    bl_idname = "xivbc.toggle_gear"
+    bl_idname = ".".join(config.id_name, "toggle_gear")
     
     def execute(self, context):
         
@@ -56,13 +57,13 @@ class ToggleGear_OP(bpy.types.Operator):
                      bones.back_gear_left, bones.back_gear_right]
 
         for bone_name in bone_list:
-            Boner.PoseBone(armature, bone_name).toggleVisibility()
+            LegacyBoner.PoseBone(armature, bone_name).toggleVisibility()
 
         return {'FINISHED'}
     
-class ToggleFace_OP(bpy.types.Operator):
+class ARMATURE_OT_ToggleFace(bpy.types.Operator):
     bl_label = "Face"
-    bl_idname = "xivbc.toggle_face"
+    bl_idname = ".".join(config.id_name, "toggle_face")
     
     def execute(self, context):
         
@@ -80,13 +81,13 @@ class ToggleFace_OP(bpy.types.Operator):
                      bones.eyebrow_right_inner, bones.eyebrow_right_main, bones.ear_left, bones.ear_right,
                      bones.eye_left, bones.eye_right, bones.eye_corner_inner]
         for bone_name in bone_list:
-            Boner.PoseBone(armature, bone_name).toggleVisibility()
+            LegacyBoner.PoseBone(armature, bone_name).toggleVisibility()
 
         return {'FINISHED'}
     
-class ToggleHair_OP(bpy.types.Operator):
+class ARMATURE_OT_ToggleHair(bpy.types.Operator):
     bl_label = "Hair"
-    bl_idname = "xivbc.toggle_hair"
+    bl_idname = ".".join(config.id_name, "toggle_hair")
     
     def execute(self, context):
         
@@ -103,13 +104,13 @@ class ToggleHair_OP(bpy.types.Operator):
         bone_list += bones.earring_left
         bone_list += bones.earring_right
         for bone_name in bone_list:
-            Boner.PoseBone(armature, bone_name).toggleVisibility()
+            LegacyBoner.PoseBone(armature, bone_name).toggleVisibility()
 
         return {'FINISHED'}
         
-class ToggleTwist_OP(bpy.types.Operator):
+class ARMATURE_OT_ToggleTwist(bpy.types.Operator):
     bl_label = "Twist"
-    bl_idname = "xivbc.toggle_twist"
+    bl_idname = ".".join(config.id_name, "toggle_twist")
     
     def execute(self, context):
         
@@ -123,13 +124,13 @@ class ToggleTwist_OP(bpy.types.Operator):
         bone_list = [bones.forearm_twist_left, bones.forearm_twist_right, bones.shoulder_twist_left,
                      bones.shoulder_twist_right, bones.upperarm_twist_left, bones.upperarm_twist_right]
         for bone_name in bone_list:
-            Boner.PoseBone(armature, bone_name).toggleVisibility()
+            LegacyBoner.PoseBone(armature, bone_name).toggleVisibility()
 
         return {'FINISHED'}
         
-class ToggleTail_OP(bpy.types.Operator):
+class ARMATURE_OT_ToggleTail(bpy.types.Operator):
     bl_label = "Tail"
-    bl_idname = "xivbc.toggle_tail"
+    bl_idname = ".".join(config.id_name, "toggle_tail")
     
     def execute(self, context):
         
@@ -142,6 +143,6 @@ class ToggleTail_OP(bpy.types.Operator):
         
         bone_list = bones.tail
         for bone_name in bone_list:
-            Boner.PoseBone(armature, bone_name).toggleVisibility()
+            LegacyBoner.PoseBone(armature, bone_name).toggleVisibility()
 
         return {'FINISHED'}

@@ -1,6 +1,6 @@
 import bpy, mathutils, math, os
-from ..utils import Boner
-from .. import bones;
+from ..utils import LegacyBoner
+from ..utils import bones;
 
 class TestOperator(bpy.types.Operator):
     bl_label = "Test Button"

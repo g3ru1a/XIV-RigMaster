@@ -1,46 +1,61 @@
+import bpy
+from .utils.config import config
+from .panels import legacy_panel, steps_panel
+
+from .operators import TestOperator
+from .operators.legacy import toggle_visibility_operators as tvo
+from .operators.legacy import custom_shapes_operator as cso
+
+
 bl_info = {
-    "name": "XIV Bone Cleaner",
-    "id_name": "xivbc",
-    "author": "G3ru1a",
-    "version": (0, 1),
-    "blender": (4, 0, 0),
-    "location": "View3D > UI > XIV Bone Cleaner",
-    "description": "Cleans up the bones from a Meddle Exported .gltf Model",
+    "name": config.name,
+    "id_name": config.id_name,
+    "author": config.author,
+    "version": config.version,
+    "blender": config.blender,
+    "location": config.location,
+    "description": config.description,
     "warning": "",
     "doc_url": "",
-    "category": "XIV Bone Cleaner 0.2",
+    "category": config.category,
 }
 
 
-import bpy
-from . import XIVBoneCleaner as xivbc;
-from .operators import BoneCleanup, ArmatureFixer, TestOperator
-from .operators import ToggleBones
-
-
 def register():
-    bpy.utils.register_class(xivbc.XIVBCMainPanel)
-    bpy.utils.register_class(BoneCleanup.BoneRemovalOperator)
-    bpy.utils.register_class(ArmatureFixer.ArmatureFixerOperator)
     bpy.utils.register_class(TestOperator.TestOperator)
-    bpy.utils.register_class(ToggleBones.ToggleClothes_OP)
-    bpy.utils.register_class(ToggleBones.ToggleFace_OP)
-    bpy.utils.register_class(ToggleBones.ToggleGear_OP)
-    bpy.utils.register_class(ToggleBones.ToggleHair_OP)
-    bpy.utils.register_class(ToggleBones.ToggleTwist_OP)
-    bpy.utils.register_class(ToggleBones.ToggleTail_OP)
+    
+    # Dawntrail Functionality
+
+    # Legacy Functionality
+    bpy.utils.register_class(legacy_panel.VIEW3D_PT_LegacyPanel)
+    bpy.utils.register_class(steps_panel.VIEW3D_PT_StepsPanel)
+
+    bpy.utils.register_class(cso.ARMATURE_OT_CustomShapes)
+
+    bpy.utils.register_class(tvo.ARMATURE_OT_ToggleClothes)
+    bpy.utils.register_class(tvo.ARMATURE_OT_ToggleFace)
+    bpy.utils.register_class(tvo.ARMATURE_OT_ToggleGear)
+    bpy.utils.register_class(tvo.ARMATURE_OT_ToggleHair)
+    bpy.utils.register_class(tvo.ARMATURE_OT_ToggleTwist)
+    bpy.utils.register_class(tvo.ARMATURE_OT_ToggleTail)
 
 def unregister():
-    bpy.utils.unregister_class(xivbc.XIVBCMainPanel)
-    bpy.utils.unregister_class(BoneCleanup.BoneRemovalOperator)
-    bpy.utils.unregister_class(ArmatureFixer.ArmatureFixerOperator)
     bpy.utils.unregister_class(TestOperator.TestOperator)
-    bpy.utils.unregister_class(ToggleBones.ToggleClothes_OP)
-    bpy.utils.unregister_class(ToggleBones.ToggleFace_OP)
-    bpy.utils.unregister_class(ToggleBones.ToggleGear_OP)
-    bpy.utils.unregister_class(ToggleBones.ToggleHair_OP)
-    bpy.utils.unregister_class(ToggleBones.ToggleTwist_OP)
-    bpy.utils.unregister_class(ToggleBones.ToggleTail_OP)
+
+    # Dawntrail Functionality
+
+    # Legacy Functionality
+    bpy.utils.unregister_class(legacy_panel.VIEW3D_PT_LegacyPanel)
+    bpy.utils.unregister_class(steps_panel.VIEW3D_PT_StepsPanel)
+    
+    bpy.utils.register_class(tvo.ARMATURE_OT_ToggleClothes)
+
+    bpy.utils.unregister_class(tvo.ARMATURE_OT_ToggleClothes)
+    bpy.utils.unregister_class(tvo.ARMATURE_OT_ToggleFace)
+    bpy.utils.unregister_class(tvo.ARMATURE_OT_ToggleGear)
+    bpy.utils.unregister_class(tvo.ARMATURE_OT_ToggleHair)
+    bpy.utils.unregister_class(tvo.ARMATURE_OT_ToggleTwist)
+    bpy.utils.unregister_class(tvo.ARMATURE_OT_ToggleTail)
     
 
 if __name__ == "__main__":

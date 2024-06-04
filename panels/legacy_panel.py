@@ -1,24 +1,14 @@
-bl_info = {
-    "name": "XIV Bone Cleaner",
-    "id_name": "xivbc",
-    "author": "G3ru1a",
-    "version": (0, 1),
-    "blender": (4, 0, 0),
-    "location": "View3D > UI > XIV Bone Cleaner",
-    "description": "Cleans up the bones from a Meddle Exported .gltf Model",
-    "warning": "",
-    "doc_url": "",
-    "category": "XIV Bone Cleaner 0.1",
-}
 
+from ..utils.config import config
 import bpy, mathutils, math
 
-class XIVBCMainPanel(bpy.types.Panel):
-    bl_label = bl_info['name']
-    bl_idname = bl_info['id_name']
+class VIEW3D_PT_LegacyPanel(bpy.types.Panel):
+    bl_label = "Endwalker Armatures"
+    bl_idname = "VIEW3D_PT_LegacyPanel"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
-    bl_category = bl_info['category']
+    bl_category = config.category
+    bl_options = {"DEFAULT_CLOSED"}
     
     def draw(self, context):
         layout = self.layout
