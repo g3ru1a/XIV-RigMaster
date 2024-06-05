@@ -5,7 +5,7 @@ from ...utils.config import config
 
 class ARMATURE_OT_ToggleClothes(bpy.types.Operator):
     bl_label = "Clothes"
-    bl_idname = ".".join((config.id_name, "toggle_clothes"))
+    bl_idname = ".".join((config.id_name, "toggle_clothes_legacy"))
     
     def execute(self, context):
         
@@ -40,7 +40,7 @@ class ARMATURE_OT_ToggleClothes(bpy.types.Operator):
     
 class ARMATURE_OT_ToggleGear(bpy.types.Operator):
     bl_label = "Gear"
-    bl_idname = ".".join((config.id_name, "toggle_gear"))
+    bl_idname = ".".join((config.id_name, "toggle_gear_legacy"))
     
     def execute(self, context):
         
@@ -63,7 +63,7 @@ class ARMATURE_OT_ToggleGear(bpy.types.Operator):
     
 class ARMATURE_OT_ToggleFace(bpy.types.Operator):
     bl_label = "Face"
-    bl_idname = ".".join((config.id_name, "toggle_face"))
+    bl_idname = ".".join((config.id_name, "toggle_face_legacy"))
     
     def execute(self, context):
         
@@ -87,7 +87,7 @@ class ARMATURE_OT_ToggleFace(bpy.types.Operator):
     
 class ARMATURE_OT_ToggleHair(bpy.types.Operator):
     bl_label = "Hair"
-    bl_idname = ".".join((config.id_name, "toggle_hair"))
+    bl_idname = ".".join((config.id_name, "toggle_hair_legacy"))
     
     def execute(self, context):
         
@@ -110,7 +110,7 @@ class ARMATURE_OT_ToggleHair(bpy.types.Operator):
         
 class ARMATURE_OT_ToggleTwist(bpy.types.Operator):
     bl_label = "Twist"
-    bl_idname = ".".join((config.id_name, "toggle_twist"))
+    bl_idname = ".".join((config.id_name, "toggle_twist_legacy"))
     
     def execute(self, context):
         
@@ -130,7 +130,7 @@ class ARMATURE_OT_ToggleTwist(bpy.types.Operator):
         
 class ARMATURE_OT_ToggleTail(bpy.types.Operator):
     bl_label = "Tail"
-    bl_idname = ".".join((config.id_name, "toggle_tail"))
+    bl_idname = ".".join((config.id_name, "toggle_tail_legacy"))
     
     def execute(self, context):
         

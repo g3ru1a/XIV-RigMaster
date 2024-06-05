@@ -5,7 +5,7 @@ from ...utils import bones;
 
 class ARMATURE_OT_PoseReset(bpy.types.Operator):
     bl_label = "Reset Pose"
-    bl_idname = ".".join((config.id_name, "pose_reset"))
+    bl_idname = ".".join((config.id_name, "pose_reset_legacy"))
     
     def execute(self, context):
         # Check if an Armature is selected

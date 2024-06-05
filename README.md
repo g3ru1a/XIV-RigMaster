@@ -6,13 +6,14 @@ XIV RigMaster enhances Final Fantasy XIV character models by streamlining armatu
 
 #### Dawntrail Character Models
 
- - [ ] Apply Custom Shapes to Body Bones
+ - [x] Apply Custom Shapes to Body Bones
+ - [ ] Apply Custom Shapes to Head Bones
  - [ ] Apply Custom Shapes to Gear Bones
  - [ ] Apply Custom Shapes to Cloth Bones
  - [ ] Apply Custom Shapes to Face Bones
  - [ ] Apply Custom Shapes to Hair Bones
  - [ ] Add IK to Legs and Arms
- - [ ] Add Buttons to toggle the visibility of bone groups
+ - [x] Add Buttons to toggle the visibility of bone groups
 
 #### Endwalker Character Models
 
