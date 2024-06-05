@@ -1,0 +1,14 @@
+leg_left: &left_leg
+  name: j_sune_l
+  visible: true
+  shape: Cylinder
+  color: THEME13
+  transforms:
+    default:
+      scale: [0.45, 0.5, 0.5]
+      offset: [.01, .095, 0]
+      rotation: [180, 0, 0]
+    roegadyn:
+      scale: [1, 1, 1]
+    hrothgar:
+      offset: [.02, 0, 0]

@@ -62,3 +62,5 @@ def all_operators_in_module(operators_module: any, register: bool = True) -> Non
                 bpy.utils.unregister_class(obj)
                 print(f"Unregistered: {obj}")
 
+def lists_are_equal(a: list, b: list) -> bool:
+    return a == b

@@ -1,27 +1,26 @@
-class Config:
-    def __init__(self, name, id_name, author, version, blender, location, description, warning, doc_url, category, custom_shapes_filename):
-        self.name = name
-        self.id_name = id_name
-        self.author = author
-        self.version = version
-        self.blender = blender
-        self.location = location
-        self.description = description
-        self.warning = warning
-        self.doc_url = doc_url
-        self.category = category
-        self.custom_shapes_filename = custom_shapes_filename
+## Ensure YAML is installed
+import sys
+import subprocess
+import os
+try:
+    import yaml  # type: ignore
+except:
+    python_exe = os.path.join(sys.prefix, 'bin', 'python.exe')
+    # upgrade pip
+    subprocess.call([python_exe, "-m", "ensurepip"])
+    subprocess.call([python_exe, "-m", "pip", "install", "--upgrade", "pip"])
+    # install required packages
+    subprocess.call([python_exe, "-m", "pip", "install", "pyyaml"])
 
-config = Config(
-    name="XIV RigMaster",
-    id_name="xivrm",
-    author="G3ru1a",
-    version=(0, 3),
-    blender=(4, 0, 0),
-    location="View3D > UI > XIV RigMaster",
-    description="XIV RigMaster enhances Final Fantasy XIV character models by streamlining armatures with custom shapes and adding functionality such as IK and Bone Constraints, ensuring a cleaner and more professional rigging process. Perfect for animators and modellers looking to elevate their creations.",
-    warning="",
-    doc_url="",
-    category="XIV RigMaster 0.3",
-    custom_shapes_filename="RigMaster-CustomShapes-Dawntrail.blend"
-)
+## ./Ensure YAML
+import io, yaml # type: ignore
+from .tools import get_addon_absolute_path
+
+path_to_config = os.path.join(get_addon_absolute_path(), "config.yaml")
+with io.open(path_to_config) as stream:
+    data = yaml.safe_load(stream)
+print("Config File:" + str(data))
+
+data["version"] = tuple(data["version"])
+data["blender"] = tuple(data["blender"])
+data["variants"] = [tuple(k) for k in data["variants"]]

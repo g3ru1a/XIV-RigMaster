@@ -1,7 +1,7 @@
 import math
 from ..section import Section
 from ..tools import mode_set, import_shape_collection
-from ..config import config
+from ..config import data as config
 from .. import bones
 
 class TwistBones(Section):
@@ -9,7 +9,7 @@ class TwistBones(Section):
              bones.shoulder_twist_right, bones.upperarm_twist_left, bones.upperarm_twist_right]
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             for bone_name in self.bones:
                 bone = self.armature.get_bone(bone_name)
@@ -20,7 +20,7 @@ class LeftArm(Section):
     bones = [bones.wrist_left, bones.elbow_left, bones.shoulder_left]
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             cone_bones = [bones.elbow_left, bones.shoulder_left]
             for bone_name in cone_bones:
@@ -40,7 +40,7 @@ class RightArm(Section):
     bones = [bones.wrist_right, bones.elbow_right, bones.shoulder_right]
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             cone_bones = [bones.elbow_right, bones.shoulder_right]
             for bone_name in cone_bones:
@@ -67,7 +67,7 @@ class LeftHand(Section):
     bones = bones.fingers_left
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             for bone_name in self.bones:
                 bone = self.armature.get_bone(bone_name)
@@ -80,7 +80,7 @@ class RightHand(Section):
     bones = bones.fingers_right
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             for bone_name in self.bones:
                 bone = self.armature.get_bone(bone_name)
@@ -100,7 +100,7 @@ class Shoulders(Section):
     bones = [bones.shoulder_blade_left, bones.shoulder_blade_right]
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             for bone_name in self.bones:
                 bone = self.armature.get_bone(bone_name)
@@ -113,7 +113,7 @@ class Spine(Section):
     bones = [bones.upper_chest, bones.chest, bones.abdomen]
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             chest = self.armature.get_bone(bones.upper_chest)
             abdomen_top = self.armature.get_bone(bones.chest)
@@ -138,7 +138,7 @@ class Boobs(Section):
     bones = [bones.boob_left, bones.boob_right]
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             for bone_name in self.bones:
                 bone = self.armature.get_bone(bone_name)

@@ -20,6 +20,10 @@ class RM_Bone:
     def set_custom_shape_rotation(self, rotation: tuple[float,float,float] = (0, 0, 0)) -> None:
         with mode_set(mode="POSE"):
             self.bone.custom_shape_rotation_euler = mathutils.Euler(rotation, "XYZ")
+    
+    def set_custom_shape_rotation_euler(self, rotation: tuple[float,float,float] = (0, 0, 0)) -> None:
+        with mode_set(mode="POSE"):
+            self.bone.custom_shape_rotation_euler = rotation
 
     def set_custom_shape_offset(self, offset: tuple[float,float,float] = (0, 0, 0)) -> None:
         with mode_set(mode="POSE"):

@@ -1,12 +1,12 @@
 import bpy, mathutils, math
 from ...utils import LegacyBoner, bones
-from ...utils.config import config
+from ...utils.config import data as config
 from ...utils.tools import import_shape_collection
 
 
 class ARMATURE_OT_CustomShapes(bpy.types.Operator):
     bl_label = "Apply Custom Shapes"
-    bl_idname = ".".join((config.id_name, "custom_shapes_legacy"))
+    bl_idname = ".".join((config["id_name"], "custom_shapes_legacy"))
     
     def execute(self, context):
         # Check if an Armature is selected

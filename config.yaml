@@ -1,0 +1,35 @@
+name: "XIV RigMaster"
+id_name: "xivrm"
+author: "G3ru1a"
+version: [0, 3]
+blender: [4, 0, 0]
+location: "View3D > UI > XIV RigMaster"
+description: "XIV RigMaster enhances Final Fantasy XIV character models by streamlining armatures with custom shapes and adding functionality such as IK and Bone Constraints, ensuring a cleaner and more professional rigging process. Perfect for animators and modellers looking to elevate their creations."
+warning: ""
+doc_url: ""
+category: "XIV RigMaster 0.3"
+custom_shapes_filename: "RigMaster-CustomShapes-Dawntrail.blend"
+yaml_files_folder: "dump"
+rig_master_files: "rig_configurations"
+production: false
+
+variants: 
+  - ['default', "Default", "Default Values"]
+  - ['roegadyn_male', "Roegadyn Male", "Write Variants for Roegadyn"]
+  - ['roegadyn_female', "Roegadyn Female", "Write Variants for Roegadyn"]
+  - ['hrothgar_male', "Hrothgar Male", "Write Variants for Hrothgar"]
+  - ['hrothgar_female', "Hrothgar Female", "Write Variants for Hrothgar"]
+  - ['lalafell_male', "Lalafell Male", "Write Variants for Lalafell"]
+  - ['lalafell_female', "Lalafell Female", "Write Variants for Lalafell"]
+  - ['viera_male', "Viera Male", "Write Variants for Viera"]
+  - ['viera_female', "Viera Female", "Write Variants for Viera"]
+  - ['elezen_male', "Elezen Male", "Write Variants for Elezen"]
+  - ['elezen_female', "Elezen Female", "Write Variants for Elezen"]
+  - ['aura_male', "Au Ra Male", "Write Variants for Au Ra"]
+  - ['aura_female', "Au Ra Female", "Write Variants for Au Ra"]
+  - ['miqote_male', "Miqo'te Male", "Write Variants for Miqo'te"]
+  - ['miqote_female', "Miqo'te Female", "Write Variants for Miqo'te"]
+  - ['midlander_male', "Midlander Male", "Write Variants for Midlander"]
+  - ['midlander_female', "Midlander Female", "Write Variants for Midlander"]
+  - ['highlander_male', "Highlander Male", "Write Variants for Highlander"]
+  - ['highlander_female', "Highlander Female", "Write Variants for Highlander"]

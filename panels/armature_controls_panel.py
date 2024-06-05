@@ -1,4 +1,4 @@
-from ..utils.config import config
+from ..utils.config import data as config
 import bpy, mathutils, math
 
 class VisibilityProperties(bpy.types.PropertyGroup):
@@ -15,34 +15,34 @@ class VisibilityProperties(bpy.types.PropertyGroup):
 
     show_extra: bpy.props.BoolProperty(name="Show Extra", default=False) # type: ignore
 
-class VIEW3D_PT_VisibilityPanel(bpy.types.Panel):
-    bl_label = "Show/Hide Bones"
-    bl_idname = "VIEW3D_PT_VisibilityPanel"
+class VIEW3D_PT_ControlsPanel(bpy.types.Panel):
+    bl_label = "Armature Controls"
+    bl_idname = "VIEW3D_PT_ControlsPanel"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
-    bl_category = config.category
+    bl_category = config["category"]
     
     def draw(self, context):
         layout = self.layout
         props: VisibilityProperties = context.scene.visibility_props
 
         row = layout.row()
-        row.operator(".".join((config.id_name, "toggle_clothing")), depress=props.clothing_visible)
-        row.operator(".".join((config.id_name, "toggle_gear")), depress=props.gear_visible)
+        row.operator(".".join((config["id_name"], "toggle_clothing")), depress=props.clothing_visible)
+        row.operator(".".join((config["id_name"], "toggle_gear")), depress=props.gear_visible)
         
         row = layout.row()
         arm_depress = True if props.left_arm_visible == props.right_arm_visible == True else False
         hands_depress = True if props.left_hand_visible == props.right_hand_visible == True else False
-        row.operator(".".join((config.id_name, "toggle_arms")), depress=arm_depress)
-        row.operator(".".join((config.id_name, "toggle_hands")), depress=hands_depress)
+        row.operator(".".join((config["id_name"], "toggle_arms")), depress=arm_depress)
+        row.operator(".".join((config["id_name"], "toggle_hands")), depress=hands_depress)
         
         row = layout.row()
         leg_depress = True if props.left_leg_visible == props.right_leg_visible == True else False
-        row.operator(".".join((config.id_name, "toggle_legs")), depress=leg_depress)
-        row.operator(".".join((config.id_name, "toggle_twists")), depress=props.twists_visible)
+        row.operator(".".join((config["id_name"], "toggle_legs")), depress=leg_depress)
+        row.operator(".".join((config["id_name"], "toggle_twists")), depress=props.twists_visible)
 
         row = layout.row()
-        row.operator(".".join((config.id_name, "toggle_tail")), depress=props.tail_visible)
+        row.operator(".".join((config["id_name"], "toggle_tail")), depress=props.tail_visible)
 
         # Create a collapsible box
         box = layout.box()
@@ -54,16 +54,16 @@ class VIEW3D_PT_VisibilityPanel(bpy.types.Panel):
         # Display buttons conditionally
         if props.show_extra:
             box_row = box.row()
-            box_row.operator(".".join((config.id_name, "toggle_left_hand")), depress=props.left_hand_visible)
-            box_row.operator(".".join((config.id_name, "toggle_right_hand")), depress=props.right_hand_visible)
+            box_row.operator(".".join((config["id_name"], "toggle_left_hand")), depress=props.left_hand_visible)
+            box_row.operator(".".join((config["id_name"], "toggle_right_hand")), depress=props.right_hand_visible)
 
             box_row = box.row()
-            box_row.operator(".".join((config.id_name, "toggle_left_arm")), depress=props.left_arm_visible)
-            box_row.operator(".".join((config.id_name, "toggle_right_arm")), depress=props.right_arm_visible)
+            box_row.operator(".".join((config["id_name"], "toggle_left_arm")), depress=props.left_arm_visible)
+            box_row.operator(".".join((config["id_name"], "toggle_right_arm")), depress=props.right_arm_visible)
 
             box_row = box.row()
-            box_row.operator(".".join((config.id_name, "toggle_left_leg")), depress=props.left_leg_visible)
-            box_row.operator(".".join((config.id_name, "toggle_right_leg")), depress=props.right_leg_visible)
+            box_row.operator(".".join((config["id_name"], "toggle_left_leg")), depress=props.left_leg_visible)
+            box_row.operator(".".join((config["id_name"], "toggle_right_leg")), depress=props.right_leg_visible)
 
 
     

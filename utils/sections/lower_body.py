@@ -1,14 +1,14 @@
 import math
 from ..section import Section
 from ..tools import mode_set, import_shape_collection
-from ..config import config
+from ..config import data as config
 from .. import bones
 
 class Waist(Section):
     bones = [bones.pelvis, bones.waist]
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             hip = self.armature.get_bone(bones.pelvis)
             waist = self.armature.get_bone(bones.waist)
@@ -27,7 +27,7 @@ class LeftLeg(Section):
     bones = [bones.thigh_left, bones.knee_left, bones.calf_left, bones.foot_left, bones.toes_left]
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             
             thigh = self.armature.get_bone(bones.thigh_left)
@@ -59,7 +59,7 @@ class RightLeg(Section):
     bones = [bones.thigh_right, bones.knee_right, bones.calf_right, bones.foot_right, bones.toes_right]
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             
             thigh = self.armature.get_bone(bones.thigh_right)
@@ -98,7 +98,7 @@ class Tail(Section):
     bones = bones.tail
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             for bone_name in self.bones:
                 bone = self.armature.get_bone(bone_name)

@@ -1,14 +1,14 @@
 import math
 from ..section import Section
 from ..tools import mode_set, import_shape_collection
-from ..config import config
+from ..config import data as config
 from .. import bones
 
 class Head(Section):
     bones = [bones.head]
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             head = self.armature.get_bone(bones.head)
 
@@ -21,7 +21,7 @@ class Neck(Section):
     bones = [bones.neck]
 
     def setup(self) -> None:
-        shapes = import_shape_collection(config.custom_shapes_filename)
+        shapes = import_shape_collection(config["custom_shapes_filename"])
         with mode_set(mode="POSE"):
             head = self.armature.get_bone(bones.neck)
 

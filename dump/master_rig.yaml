@@ -1,0 +1,570 @@
+j_asi_a_l:
+  color: THEME01
+  name: j_asi_a_l
+  shape: Cylinder
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.15000000596046448, 0.15000000596046448, 0.5]
+  visible: true
+j_asi_a_r:
+  color: THEME01
+  name: j_asi_a_r
+  shape: Cylinder
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.15000000596046448, 0.15000000596046448, 0.5]
+  visible: true
+j_asi_b_l:
+  color: THEME02
+  name: j_asi_b_l
+  shape: Sphere
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [0.0, 0.0, 0.0]
+      scale: [1.0, 1.0, 1.0]
+  visible: true
+j_asi_b_r:
+  color: THEME02
+  name: j_asi_b_r
+  shape: Sphere
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [0.0, 0.0, 0.0]
+      scale: [1.0, 1.0, 1.0]
+  visible: true
+j_asi_c_l:
+  color: THEME01
+  name: j_asi_c_l
+  shape: Cylinder
+  transforms:
+    default:
+      offset: [0.009999999776482582, -0.019999999552965164, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.10000000149011612, 0.10000000149011612, 0.550000011920929]
+  visible: true
+j_asi_c_r:
+  color: THEME01
+  name: j_asi_c_r
+  shape: Cylinder
+  transforms:
+    default:
+      offset: [0.009999999776482582, -0.019999999552965164, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.10000000149011612, 0.10000000149011612, 0.550000011920929]
+  visible: true
+j_asi_d_l:
+  color: THEME02
+  name: j_asi_d_l
+  shape: Sphere
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [0.0, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.30000001192092896]
+  visible: true
+j_asi_d_r:
+  color: THEME02
+  name: j_asi_d_r
+  shape: Sphere
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [0.0, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.30000001192092896]
+  visible: true
+j_asi_e_l:
+  color: THEME01
+  name: j_asi_e_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.4000000059604645, 1.0]
+  visible: true
+j_asi_e_r:
+  color: THEME01
+  name: j_asi_e_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.4000000059604645, 1.0]
+  visible: true
+j_hito_a_l:
+  color: THEME09
+  name: j_hito_a_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_hito_a_r:
+  color: THEME09
+  name: j_hito_a_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_hito_b_l:
+  color: THEME09
+  name: j_hito_b_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_hito_b_r:
+  color: THEME09
+  name: j_hito_b_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_kao:
+  color: THEME06
+  name: j_kao
+  shape: CurvedArrow
+  transforms:
+    default:
+      offset: [-0.03999999910593033, -0.019999999552965164, 0.0]
+      rotation: [1.5707963705062866, -0.7853981852531433, -0.3490658402442932]
+      scale: [1.2000000476837158, 1.2000000476837158, 3.200000047683716]
+  visible: true
+j_ko_a_l:
+  color: THEME09
+  name: j_ko_a_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_ko_a_r:
+  color: THEME09
+  name: j_ko_a_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_ko_b_l:
+  color: THEME09
+  name: j_ko_b_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_ko_b_r:
+  color: THEME09
+  name: j_ko_b_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_kosi:
+  color: THEME01
+  name: j_kosi
+  shape: Hip
+  transforms:
+    default:
+      offset: [0.0, 0.03500000014901161, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.4000000059604645, 0.4000000059604645, 0.4000000059604645]
+  visible: true
+j_kubi:
+  color: THEME06
+  name: j_kubi
+  shape: CurvedArrow
+  transforms:
+    default:
+      offset: [0.0, 0.019999999552965164, 0.0]
+      rotation: [1.5707963705062866, -0.7853981852531433, 0.0]
+      scale: [0.6000000238418579, 0.6000000238418579, 1.0]
+  visible: true
+j_kusu_a_l:
+  color: THEME09
+  name: j_kusu_a_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_kusu_a_r:
+  color: THEME09
+  name: j_kusu_a_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_kusu_b_l:
+  color: THEME09
+  name: j_kusu_b_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_kusu_b_r:
+  color: THEME09
+  name: j_kusu_b_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_mune_l:
+  color: THEME13
+  name: j_mune_l
+  shape: Cup
+  transforms:
+    default:
+      offset: [0.009999999776482582, 0.0949999988079071, 0.0]
+      rotation: [3.1415927410125732, 0.0, 0.0]
+      scale: [0.44999998807907104, 0.5, 0.5]
+  visible: true
+j_mune_r:
+  color: THEME13
+  name: j_mune_r
+  shape: Cup
+  transforms:
+    default:
+      offset: [0.009999999776482582, 0.0949999988079071, 0.0]
+      rotation: [3.1415927410125732, 0.0, 0.0]
+      scale: [0.44999998807907104, 0.5, 0.5]
+  visible: true
+j_naka_a_l:
+  color: THEME09
+  name: j_naka_a_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_naka_a_r:
+  color: THEME09
+  name: j_naka_a_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_naka_b_l:
+  color: THEME09
+  name: j_naka_b_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_naka_b_r:
+  color: THEME09
+  name: j_naka_b_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_oya_a_l:
+  color: THEME09
+  name: j_oya_a_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.019999999552965164, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_oya_a_r:
+  color: THEME09
+  name: j_oya_a_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.019999999552965164, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_oya_b_l:
+  color: THEME09
+  name: j_oya_b_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_oya_b_r:
+  color: THEME09
+  name: j_oya_b_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+  visible: true
+j_sako_l:
+  color: THEME09
+  name: j_sako_l
+  shape: Shoulder
+  transforms:
+    default:
+      offset: [0.0, 0.029999999329447746, 0.0]
+      rotation: [3.1415927410125732, 3.1415927410125732, 1.3962633609771729]
+      scale: [0.4000000059604645, 0.4000000059604645, 0.5]
+  visible: true
+j_sako_r:
+  color: THEME09
+  name: j_sako_r
+  shape: Shoulder
+  transforms:
+    default:
+      offset: [0.0, 0.029999999329447746, 0.0]
+      rotation: [3.1415927410125732, 3.1415927410125732, 1.3962633609771729]
+      scale: [0.4000000059604645, 0.4000000059604645, 0.5]
+  visible: true
+j_sebo_a:
+  color: THEME01
+  name: j_sebo_a
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.6000000238418579, 0.6000000238418579, 1.0]
+  visible: true
+j_sebo_b:
+  color: THEME01
+  name: j_sebo_b
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.03999999910593033, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [1.0, 1.2000000476837158, 1.0]
+  visible: true
+j_sebo_c:
+  color: THEME01
+  name: j_sebo_c
+  shape: Waist
+  transforms:
+    default:
+      offset: [0.009999999776482582, -0.009999999776482582, 0.0]
+      rotation: [-1.919862151145935, 1.5707963705062866, 0.0]
+      scale: [1.7000000476837158, 2.0, 4.0]
+  visible: true
+j_te_l:
+  color: THEME01
+  name: j_te_l
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.5, 0.5, 1.0]
+  visible: true
+j_te_r:
+  color: THEME01
+  name: j_te_r
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.5, 0.5, 1.0]
+  visible: true
+j_ude_a_l:
+  color: THEME01
+  name: j_ude_a_l
+  shape: Cylinder
+  transforms:
+    default:
+      offset: [0.0, 0.03999999910593033, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.800000011920929]
+  visible: true
+j_ude_a_r:
+  color: THEME01
+  name: j_ude_a_r
+  shape: Cylinder
+  transforms:
+    default:
+      offset: [0.0, 0.03999999910593033, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.800000011920929]
+  visible: true
+j_ude_b_l:
+  color: THEME01
+  name: j_ude_b_l
+  shape: Cylinder
+  transforms:
+    default:
+      offset: [0.0, 0.029999999329447746, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.800000011920929]
+  visible: true
+j_ude_b_r:
+  color: THEME01
+  name: j_ude_b_r
+  shape: Cylinder
+  transforms:
+    default:
+      offset: [0.0, 0.029999999329447746, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.800000011920929]
+  visible: true
+n_hara:
+  color: THEME03
+  name: n_hara
+  shape: Waist
+  transforms:
+    default:
+      offset: [-0.07999999821186066, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 1.5707963705062866]
+      scale: [18.0, 25.0, 25.0]
+  visible: true
+n_hhiji_l:
+  color: THEME04
+  name: n_hhiji_l
+  shape: Sphere
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [0.0, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.30000001192092896]
+  visible: true
+n_hhiji_r:
+  color: THEME04
+  name: n_hhiji_r
+  shape: Sphere
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [0.0, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.30000001192092896]
+  visible: true
+n_hkata_l:
+  color: THEME04
+  name: n_hkata_l
+  shape: Sphere
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [0.0, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.30000001192092896]
+  visible: true
+n_hkata_r:
+  color: THEME04
+  name: n_hkata_r
+  shape: Sphere
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [0.0, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.30000001192092896]
+  visible: true
+n_hte_l:
+  color: THEME04
+  name: n_hte_l
+  shape: Sphere
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [0.0, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.30000001192092896]
+  visible: true
+n_hte_r:
+  color: THEME04
+  name: n_hte_r
+  shape: Sphere
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [0.0, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 0.30000001192092896]
+  visible: true
+n_sippo_a:
+  color: THEME07
+  name: n_sippo_a
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 1.0]
+  visible: true
+n_sippo_b:
+  color: THEME07
+  name: n_sippo_b
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 1.0]
+  visible: true
+n_sippo_c:
+  color: THEME07
+  name: n_sippo_c
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 1.0]
+  visible: true
+n_sippo_d:
+  color: THEME07
+  name: n_sippo_d
+  shape: Circle
+  transforms:
+    default:
+      offset: [0.0, 0.0, 0.0]
+      rotation: [1.5707963705062866, 0.0, 0.0]
+      scale: [0.30000001192092896, 0.30000001192092896, 1.0]
+  visible: true

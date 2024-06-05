@@ -1,7 +1,5 @@
 import math
 from ..section import Section
-from ..tools import mode_set, import_shape_collection
-from ..config import config
 from .. import bones
 
 class Clothing(Section):
