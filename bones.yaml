@@ -1,14 +1,317 @@
-leg_left: &left_leg
-  name: j_sune_l
-  visible: true
-  shape: Cylinder
-  color: THEME13
-  transforms:
-    default:
-      scale: [0.45, 0.5, 0.5]
-      offset: [.01, .095, 0]
-      rotation: [180, 0, 0]
-    roegadyn:
-      scale: [1, 1, 1]
-    hrothgar:
-      offset: [.02, 0, 0]
+FingersLeft: &fingers_left
+  - j_oya_a_l
+  - j_oya_b_l
+  - j_hito_a_l
+  - j_hito_b_l
+  - j_naka_a_l
+  - j_naka_b_l
+  - j_kusu_a_l
+  - j_kusu_b_l
+  - j_ko_a_l
+  - j_ko_b_l 
+FingersRight: &fingers_right
+  - j_oya_a_r
+  - j_oya_b_r
+  - j_hito_a_r
+  - j_hito_b_r
+  - j_naka_a_r
+  - j_naka_b_r
+  - j_kusu_a_r
+  - j_kusu_b_r
+  - j_ko_a_r
+  - j_ko_b_r
+WristLeft: &wrist_left
+  - j_te_l
+WristRight: &wrist_right
+  - j_te_r
+HandLeft: &hand_left
+  - *fingers_left
+  - *wrist_left
+HandRight: &hand_right
+  - *fingers_right
+  - *wrist_right
+Hands: &hands
+  - *hand_left
+  - *hand_right
+ArmLeft: &arm_left
+  - *hand_left
+  - j_ude_b_l
+  - j_ude_a_l
+ArmRight: &arm_right
+  - *hand_right
+  - j_ude_b_r
+  - j_ude_a_r
+Arms: &arms
+  - *arm_left
+  - *arm_right
+ToesLeft: &toes_left
+  - j_asi_e_l
+ToesRight: &toes_right
+  - j_asi_e_r
+Toes: &toes
+  - *toes_left
+  - *toes_right
+AnkleLeft: &ankle_left
+  - j_asi_d_l
+AnkleRight: &ankle_right
+  - j_asi_d_r
+Ankles:
+  - *ankle_left
+  - *ankle_right
+LegLeft: &leg_left
+  - *toes_left
+  - *ankle_left
+  - j_asi_c_l
+  - j_asi_b_l
+  - j_asi_a_l
+LegRight: &leg_right
+  - *toes_right
+  - *ankle_right
+  - j_asi_c_r
+  - j_asi_b_r
+  - j_asi_a_r
+Legs: &legs
+  - *leg_left
+  - *leg_right
+Waist: &waist
+  - n_hara
+Hips: &hips
+  - j_kosi
+Tail: &tail
+  - n_sippo_a
+  - n_sippo_b
+  - n_sippo_c
+  - n_sippo_d
+  - n_sippo_e
+Spine: &spine
+  - j_sebo_a
+  - j_sebo_b
+  - j_sebo_c
+Clavicles: &clavicles
+  - j_sako_l
+  - j_sako_r
+Boobs: &boobs
+  - j_mune_l
+  - j_mune_r
+LowerBody: &lower_body
+  - *legs
+  - *hips
+  - *tail
+UpperBody: &upper_body
+  - *spine
+  - *arms
+  - *clavicles
+  - *boobs
+Clothes: &clothes
+  - j_sk_f_a_l
+  - j_sk_f_b_l
+  - j_sk_f_c_l
+  - j_sk_s_a_l
+  - j_sk_s_b_l
+  - j_sk_s_c_l
+  - j_sk_b_a_l
+  - j_sk_b_b_l
+  - j_sk_b_c_l
+  - j_sk_f_a_r
+  - j_sk_f_b_r
+  - j_sk_f_c_r
+  - j_sk_s_a_r
+  - j_sk_s_b_r
+  - j_sk_s_c_r
+  - j_sk_b_a_r
+  - j_sk_b_b_r
+  - j_sk_b_c_r
+KneeGear: &knee_gear
+  - n_hizasoubi_l
+  - n_hizasoubi_r
+ElbowGear: &elbow_gear
+  - n_hijisoubi_l
+  - n_hijisoubi_r
+ShoulderGear: &shoulder_gear
+  - n_kataarmor_l
+  - n_kataarmor_r
+Gear: &gear
+  - *knee_gear
+  - *elbow_gear
+  - *shoulder_gear
+Shields: &shields
+  - n_buki_tate_l
+  - n_buki_tate_r
+WeaponHand: &weapon_hand
+  - n_buki_l
+  - n_buki_r
+WeaponBack: &weapon_back
+  - j_buki_sebo_l
+  - j_buki_sebo_r
+WeaponWaist: &weapon_waist
+  - j_buki_kosi_l
+  - j_buki2_kosi_l
+  - j_buki_kosi_r
+  - j_buki2_kosi_r
+Equipment: &equipment
+  - *shields
+  - *weapon_hand
+  - *weapon_back
+  - *weapon_waist
+# Head/Face \/
+Jaw: &jaw
+  - j_ago
+  - j_f_dago
+  - j_f_ago
+UpperLip: &upper_lip
+  - j_f_ulip_a
+  - j_f_ulip_b
+  - j_f_uslip_l
+  - j_f_umlip_01_l
+  - j_f_umlip_02_l
+  - j_f_ulip_01_l
+  - j_f_ulip_02_l
+  - j_f_ulip_01_r
+  - j_f_ulip_02_r
+  - j_f_umlip_01_r
+  - j_f_umlip_02_r
+  - j_f_uslip_r
+LowerLip: &lower_lip
+  - j_f_dlip_a
+  - j_f_dlip_b
+  - j_f_dslip_l
+  - j_f_dmlip_01_l
+  - j_f_dmlip_02_l
+  - j_f_dlip_01_l
+  - j_f_dlip_02_l
+  - j_f_dlip_01_r
+  - j_f_dlip_02_r
+  - j_f_dmlip_01_r
+  - j_f_dmlip_02_r
+  - j_f_dslip_r
+Tongue: &tongue
+  - j_f_bero_01
+  - j_f_bero_02
+  - j_f_bero_03
+Mouth: &mouth
+  - *lupper_lip
+  - *llower_lip
+  - j_f_lip_l
+  - j_f_lip_r
+  - j_f_hagukiup
+  - j_f_hagukidn
+Cheeks: &cheeks
+  - j_f_hoho_l
+  - j_f_hoho_r
+  - j_f_dhoho_l
+  - j_f_dhoho_r
+  - j_f_shoho_l
+  - j_f_shoho_r
+  - j_f_dmemoto_r
+  - j_f_dmemoto_l
+Nose: &nose
+  - j_f_hana
+  - j_f_uhana
+  - j_f_hana_r
+  - j_f_hana_l
+EyebrowLeft: &eyebrow_left
+  - j_f_mayu_l
+  - j_f_mmayu_l
+  - j_f_miken_l
+  - j_f_dmiken_l
+  - j_f_miken_01_l
+  - j_f_miken_02_l
+EyebrowRight: &eyebrow_right
+  - j_f_mayu_r
+  - j_f_mmayu_r
+  - j_f_miken_r
+  - j_f_dmiken_r
+  - j_f_miken_01_r
+  - j_f_miken_02_r
+Eyebrows: &eyebrows
+  - *leyebrow_left
+  - *leyebrow_right
+EyelidLeft: &eyelid_left
+  - j_f_dmab_l
+  - j_f_umab_l
+  - j_f_mab_l
+  - j_f_mabup_01_l
+  - j_f_mabup_02out_l
+  - j_f_mabup_03in_l
+  - j_f_mabdn_01_l
+  - j_f_mabdn_02out_l
+  - j_f_mabdn_03in_l
+EyelidRight: &eyelid_right
+  - j_f_dmab_r
+  - j_f_umab_r
+  - j_f_mab_r
+  - j_f_mabup_01_r
+  - j_f_mabup_02out_r
+  - j_f_mabup_03in_r
+  - j_f_mabdn_01_r
+  - j_f_mabdn_02out_r
+  - j_f_mabdn_03in_r
+Eyelids: &eyelids
+  - *leyelid_left
+  - *leyelid_right
+Pupils: &pupils
+  - j_f_eye_l
+  - j_f_eye_r
+  - j_f_eyepuru_r
+  - j_f_eyepuru_l
+Eyes: &eyes
+  - *lpupils
+  - *leyelids
+  - *leyebrows
+Face: &face
+  - *ljaw
+  - *lmouth
+  - *lcheeks
+  - *lnose
+  - *leyes
+  - j_f_face
+Neck: &neck
+  - j_kubi
+Ears: &ears
+  - j_mimi_l
+  - j_mimi_r
+Earrings: &earrings
+  - n_ear_a_l
+  - n_ear_b_l
+  - n_ear_a_r
+  - n_ear_b_r
+HairGeneric: &hair_generic
+  - j_kami_a
+  - j_kami_b
+  - j_kami_f_l
+  - j_kami_f_r
+HairStyleSpecific: &hair_style_specific
+  - j_ex_h0158_ke_f
+  - j_ex_h0158_ke_l
+  - j_ex_h0158_ke_r
+  - j_ex_h0158_ke_b
+Hair: &hair
+  - *hair_generic
+  - *hair_style_specific
+Head: &head
+  - j_kao
+  - *lneck
+  - *lears
+  - *learrings
+  - *lhair
+  - *lface
+Twist: &twist
+  - n_hte_l
+  - n_hte_r
+  - n_hhiji_l
+  - n_hhiji_r
+  - n_hkata_l
+  - n_hkata_r
+NoAnim:
+  - j_f_noanim_ago
+  - j_f_noanim_eyesize_r
+  - j_f_noanim_eyesize_l
+PRM:
+  - j_f_eyeprmroll_l
+  - j_f_eyeprmroll_r
+  - j_f_eyeprm_01_r
+  - j_f_eyeprm_02_r
+  - j_f_irisprm_r
+  - j_f_eyeprm_01_l
+  - j_f_eyeprm_02_l
+  - j_f_irisprm_l
